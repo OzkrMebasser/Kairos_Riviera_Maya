@@ -15,7 +15,7 @@ const Slider = ({ images }) => {
   const handleOnNextClick = () => {
     count = (count + 1 ) % images.length
     setCurrentIndex(count)
-    slideRef.current.classList.add('fade-anim')
+    slideRef.current.classList.add(0)
   }
 
   const handleOnPrevClick = () => {
@@ -35,7 +35,7 @@ const Slider = ({ images }) => {
   }
 
   const removeAnimation = () => {
-    slideRef.current.classList.remove('fade-anim')
+    slideRef.current.classList.remove(0)
   }
 
   useEffect(() => {
