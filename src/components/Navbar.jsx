@@ -6,15 +6,15 @@ import logo from '../img/kairosNew.jpg';
 const  Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(true);
-    const [navbar, setNavbar] = useState(false);
+    // const [navbar, setNavbar] = useState(false);
   
     const changeNavBar = () => {
         // console.log(window.scrollY);
       if (window.screenY > 500) {
-        setIsOpen(true);
-      } else {
-        setIsOpen(false);
-      }
+        setIsOpen(true)
+      } else if (window.screenY < 500){
+        setIsOpen(false)
+      }  
     }
   
     window.addEventListener('scroll', changeNavBar)
@@ -23,7 +23,7 @@ const  Navbar = () => {
     
   return (
   <>    
-        <nav className={isOpen ? "bg-transparent h-28 z-20 fixed top-0 left-0 w-screen " : "bg-blue h-28 z-20 fixed top-0 left-0 w-screen "  }>
+        <nav className={!isOpen ? "bg-transparent h-28 z-20 fixed top-0 left-0 w-screen " : "bg-blue h-28 z-20 fixed top-0 left-0 w-screen "  }>
 
       {/* <nav className={
         

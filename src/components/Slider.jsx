@@ -39,12 +39,12 @@ const Slider = ({ images }) => {
   }
 
   useEffect(() => {
-    startSlider()
+    startSlider(0)
 
     slideRef.current.addEventListener('animationend', removeAnimation)
     slideRef.current.addEventListener('mouseenter', pauseSlider)
     slideRef.current.addEventListener('mouseleave', startSlider)
-  }, [])
+  }, startSlider())
 
   return (
     <>
