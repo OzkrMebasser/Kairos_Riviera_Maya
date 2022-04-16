@@ -10,7 +10,7 @@ const  Navbar = () => {
   
     const changeNavBar = () => {
         // console.log(window.scrollY);
-      if (window.screenY > 150) {
+      if (window.screenY > 500) {
         setIsOpen(true);
       } else {
         setIsOpen(false);
